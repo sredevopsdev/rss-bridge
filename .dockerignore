@@ -6,7 +6,7 @@
 .travis.yml
 cache/*
 CONTRIBUTING.md
-DEBUG
+# DEBUG
 Dockerfile
 phpcompatibility.xml
 phpcs.xml

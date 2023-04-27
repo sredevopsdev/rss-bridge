@@ -1,4 +1,4 @@
-RSS-Bridge ships a few options the host may or may not activate. All options are listed in the [config.default.ini.php](https://github.com/RSS-Bridge/rss-bridge/blob/master/config.default.ini.php) file, see [Custom Configuration](08_Custom_Configuration.md) section for more information.
+RSS-Bridge ships a few options the host may or may not activate. All options are listed in the [config.default.ini.php](https://github.com/sredevopsdev/rss-bridge/blob/master/config.default.ini.php) file, see [Custom Configuration](08_Custom_Configuration.md) section for more information.
 
 ## Customizable cache timeout
 

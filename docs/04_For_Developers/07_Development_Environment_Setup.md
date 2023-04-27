@@ -10,7 +10,7 @@ mkdir rss-bridge-contribution
 cd rss-bridge-contribution
 
 # clone the project into a subfolder
-git clone https://github.com/RSS-Bridge/rss-bridge
+git clone https://github.com/sredevopsdev/rss-bridge
 ```
 
 Then add a `docker-compose.yml` file:

@@ -9,7 +9,7 @@
  *
  * @package Core
  * @license http://unlicense.org/ UNLICENSE
- * @link    https://github.com/rss-bridge/rss-bridge
+ * @link    https://github.com/sredevopsdev/rss-bridge
  */
 
 // based on https://github.com/laravel/framework/blob/8.x/src/Illuminate/Support/Str.php

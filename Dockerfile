@@ -1,10 +1,12 @@
-FROM lwthiker/curl-impersonate:0.5-ff-slim-buster AS curlimpersonate
+FROM lwthiker/curl-impersonate:0.5.2-ff-slim-buster AS curlimpersonate
 
-FROM php:8.0.27-fpm-buster AS rssbridge
+FROM php:8.1.18-fpm AS rssbridge
 
-LABEL description="RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one."
-LABEL repository="https://github.com/RSS-Bridge/rss-bridge"
-LABEL website="https://github.com/RSS-Bridge/rss-bridge"
+LABEL description="(Fork of) RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one."
+LABEL repository="https://github.com/sredevopsdev/rss-bridge"
+LABEL website="https://github.com/sredevopsdev/rss-bridge"
+
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
@@ -14,7 +16,9 @@ RUN apt-get update && \
       libmemcached-dev \
       nss-plugin-pem \
       libicu-dev && \
-    docker-php-ext-install zip && \
+      apt autoclean -y
+
+RUN docker-php-ext-install zip && \
     docker-php-ext-install intl && \
     pecl install memcached && \
     docker-php-ext-enable memcached && \
@@ -27,7 +31,7 @@ COPY --chown=www-data:www-data ./ /app/
 
 COPY --from=curlimpersonate /usr/local/lib/libcurl-impersonate-ff.so /usr/local/lib/curl-impersonate/
 
-ENV LD_PRELOAD /usr/local/lib/curl-impersonate/libcurl-impersonate-ff.so
+ENV LD_PRELOAD=/usr/local/lib/curl-impersonate/libcurl-impersonate-ff.so
 
 ENV CURL_IMPERSONATE ff91esr
 

@@ -9,7 +9,7 @@
  *
  * @package Core
  * @license http://unlicense.org/ UNLICENSE
- * @link    https://github.com/rss-bridge/rss-bridge
+ * @link    https://github.com/sredevopsdev/rss-bridge
  */
 
 final class ApiAuthenticationMiddleware

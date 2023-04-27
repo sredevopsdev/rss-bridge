@@ -1,6 +1,6 @@
-FROM rssbridge/rss-bridge:latest
+FROM ngeorger/rssbridge:latest
 
-RUN  apt-get update && \
+RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
       git && \
     pecl install xdebug && \

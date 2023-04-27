@@ -24,9 +24,9 @@
         "google_analytics": false,
         "plausible_domain": false,
         "links": {
-            "GitHub Repository": "https://github.com/RSS-Bridge/rss-bridge",
-            "Help/Support/Bugs": "https://github.com/RSS-Bridge/rss-bridge/issues",
-            "Docker Images": "https://github.com/RSS-Bridge/rss-bridge/pkgs/container/rss-bridge"
+            "GitHub Repository": "https://github.com/sredevopsdev/rss-bridge",
+            "Help/Support/Bugs": "https://github.com/sredevopsdev/rss-bridge/issues",
+            "Docker Images": "https://github.com/sredevopsdev/rss-bridge/pkgs/container/rss-bridge"
         },
         "powered_by": "Powered by Daux.io"
     }
