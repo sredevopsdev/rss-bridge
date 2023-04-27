@@ -1,4 +1,4 @@
-FROM ngeorger/rssbridge:latest
+FROM ghcr.io/sredevopsdev/rss-bridge:latest
 
 RUN apt-get update && \
     apt-get install --yes --no-install-recommends \

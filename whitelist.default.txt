@@ -3,4 +3,7 @@ Twitter
 Telegram
 Reddit
 Filter
+Vk
 FeedMerge
+Twitch
+ThePirateBay

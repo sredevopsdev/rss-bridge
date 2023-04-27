@@ -10,7 +10,7 @@
 ; Find a list of supported timezones at
 ; https://www.php.net/manual/en/timezones.php
 ; timezone = "UTC" (default)
-timezone = "UTC-4"
+timezone = "UTC"
 
 ; Display a system message to users.
 message = ""

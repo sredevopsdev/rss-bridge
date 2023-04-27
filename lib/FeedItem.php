@@ -75,7 +75,7 @@ class FeedItem
      * <?php
      * $item = array();
      *
-     * $item['uri'] = 'https://www.github.com/rss-bridge/rss-bridge/';
+     * $item['uri'] = 'https://www.github.com/sredevopsdev/rss-bridge/';
      * $item['title'] = 'Title';
      * $item['timestamp'] = strtotime('now');
      * $item['author'] = 'Unknown author';
@@ -93,7 +93,7 @@ class FeedItem
      * <?php
      * $feedItem = \FeedItem();
      *
-     * $feedItem->uri = 'https://www.github.com/rss-bridge/rss-bridge/';
+     * $feedItem->uri = 'https://www.github.com/sredevopsdev/rss-bridge/';
      * $feedItem->title = 'Title';
      * $feedItem->timestamp = strtotime('now');
      * $feedItem->autor = 'Unknown author';
