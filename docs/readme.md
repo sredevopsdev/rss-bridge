@@ -1,4 +1,4 @@
-# RSS-Bridge Documentation
+# (Fork of) RSS-Bridge Documentation
 
 This folder contains the RSS-Bridge documentation. It uses daux.io to compile the static website for gh pages.
 
