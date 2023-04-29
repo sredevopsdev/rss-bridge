@@ -4,8 +4,15 @@ on:
   push:
     branches:
       - 'master'
+    paths:
+      - 'Dockerfile'
+      - 'docker-bake.hcl'
+      - './devcontainer/**'      
     tags:
       - 'v*'
+
+  workflow_dispatch:
+
 
 env:
   DOCKERHUB_SLUG: ngeorger/rssbridge

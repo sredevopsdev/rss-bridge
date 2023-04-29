@@ -1,6 +1,6 @@
 .git
-!.git/HEAD
-!.git/refs/heads/*
+.git/HEAD
+.git/refs/heads/*
 .gitattributes
 .github/*
 .travis.yml
@@ -13,4 +13,3 @@ phpcs.xml
 phpcs.xml
 scalingo.json
 tests/*
-whitelist.txt
