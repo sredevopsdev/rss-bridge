@@ -31,7 +31,7 @@ class NovelUpdatesBridge extends BridgeAbstract
         $fullhtml = getSimpleHTMLDOM($this->getURI());
 
         $this->seriesTitle = $fullhtml->find('div.seriestitlenu', 0)->plaintext;
-        // dirty fix for nasty simpledom bug: https://github.com/sebsauvage/rss-bridge/issues/259
+        // dirty fix for nasty simpledom bug: https://github.com/sredevopsdev/rss-bridge/issues/259
         // forcefully removes tbody
         $html = $fullhtml->find('table#myTable', 0)->innertext;
         $html = stristr($html, '<tbody>'); //strip thead

@@ -23,7 +23,7 @@ These steps are described in more detail below. At the end of this document you'
 
 </div></details><br>
 
-Make sure to read these instructions carefully. Please don't hesitate to open an [Issue](https://github.com/RSS-Bridge/rss-bridge/issues) if you have further questions (or suggestions). Once your bridge is finished, please open a [Pull Request](https://github.com/RSS-Bridge/rss-bridge/pulls), in order to get your bridge merge into RSS-Bridge.
+Make sure to read these instructions carefully. Please don't hesitate to open an [Issue](https://github.com/sredevopsdev/rss-bridge/issues) if you have further questions (or suggestions). Once your bridge is finished, please open a [Pull Request](https://github.com/sredevopsdev/rss-bridge/pulls), in order to get your bridge merge into RSS-Bridge.
 
 ***
 
@@ -339,7 +339,7 @@ switch($this->queriedContext){
 ```
 
 # collectData
-The `collectData` function is responsible for collecting data and adding items to generate feeds from. If you are unsure how to solve a specific problem, please don't hesitate to open an [Issue](https://github.com/RSS-Bridge/rss-bridge/issues) on GitHub. Existing bridges are also a good source to learn implementing your own bridge.
+The `collectData` function is responsible for collecting data and adding items to generate feeds from. If you are unsure how to solve a specific problem, please don't hesitate to open an [Issue](https://github.com/sredevopsdev/rss-bridge/issues) on GitHub. Existing bridges are also a good source to learn implementing your own bridge.
 
 ## Implementing the `collectData` function
 

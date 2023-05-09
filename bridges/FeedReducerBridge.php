@@ -4,7 +4,7 @@ class FeedReducerBridge extends FeedExpander
 {
     const MAINTAINER = 'mdemoss';
     const NAME = 'Feed Reducer';
-    const URI = 'http://github.com/RSS-Bridge/rss-bridge/';
+    const URI = 'http://github.com/sredevopsdev/rss-bridge/';
     const DESCRIPTION = 'Choose a percentage of a feed you want to see.';
     const PARAMETERS = [ [
         'url' => [

@@ -20,7 +20,7 @@ Fork the repo by clicking the `Fork` button at the top right of this page (must 
 
 ### If you forked the repo before
 
-[Click here to create a new pull request to your fork](https://github.com/RSS-Bridge/rss-bridge/pull/new/master). Select `compare across forks`, make the base repository `yourusername/rss-bridge` and ensure the branch is set to master. Put any title you want and create the pull request. On the page that comes after this, merge the pull request.
+[Click here to create a new pull request to your fork](https://github.com/sredevopsdev/rss-bridge/pull/new/master). Select `compare across forks`, make the base repository `yourusername/rss-bridge` and ensure the branch is set to master. Put any title you want and create the pull request. On the page that comes after this, merge the pull request.
 
 You then want to go to your application in Heroku, connect your fork via the `Deploy` tab and deploy the `master` branch.
 

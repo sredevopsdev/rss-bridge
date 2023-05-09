@@ -46,7 +46,7 @@ telegram = ""
 ; and a "Donate" button in the HTML view of the bridges feed.
 ; true  = enabled (default)
 ; false = disabled
-donations = true
+donations = false
 
 [proxy]
 

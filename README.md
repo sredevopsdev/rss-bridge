@@ -5,10 +5,10 @@
 RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one.
 
 [![LICENSE](https://img.shields.io/badge/license-UNLICENSE-blue.svg)](UNLICENSE)
-[![GitHub release](https://img.shields.io/github/release/rss-bridge/rss-bridge.svg?logo=github)](https://github.com/rss-bridge/rss-bridge/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/sredevopsdev/rss-bridge.svg?logo=github)](https://github.com/sredevopsdev/rss-bridge/releases/latest)
 [![irc.libera.chat](https://img.shields.io/badge/irc.libera.chat-%23rssbridge-blue.svg)](https://web.libera.chat/#rssbridge)
 [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#rssbridge:libera.chat)
-[![Actions Status](https://img.shields.io/github/actions/workflow/status/RSS-Bridge/rss-bridge/tests.yml?branch=master&label=GitHub%20Actions&logo=github)](https://github.com/RSS-Bridge/rss-bridge/actions)
+[![Actions Status](https://img.shields.io/github/actions/workflow/status/sredevopsdev/rss-bridge/tests.yml?branch=master&label=GitHub%20Actions&logo=github)](https://github.com/sredevopsdev/rss-bridge/actions)
 
 |||
 |:-:|:-:|
@@ -44,7 +44,7 @@ RSS-Bridge requires php 7.4 (or higher).
 
 ```bash
 cd /var/www
-git clone https://github.com/RSS-Bridge/rss-bridge.git
+git clone https://github.com/sredevopsdev/rss-bridge.git
 
 # Give the http user write permission to the cache folder
 chown www-data:www-data /var/www/rss-bridge/cache
@@ -128,12 +128,12 @@ Browse http://localhost:3000/
 
 ### Alternative installation methods
 
-[![Deploy on Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy?source=https://github.com/sebsauvage/rss-bridge)
+[![Deploy on Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy?source=https://github.com/sredevopsdev/rss-bridge)
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 [![Deploy to Cloudron](https://cloudron.io/img/button.svg)](https://www.cloudron.io/store/com.rssbridgeapp.cloudronapp.html)
 
 The Heroku quick deploy currently does not work. It might possibly work if you fork this repo and
-modify the `repository` in `scalingo.json`. See https://github.com/RSS-Bridge/rss-bridge/issues/2688
+modify the `repository` in `scalingo.json`. See https://github.com/sredevopsdev/rss-bridge/issues/2688
 
 Learn more in
 [Installation](https://rss-bridge.github.io/rss-bridge/For_Hosts/Installation.html).

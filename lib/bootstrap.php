@@ -9,7 +9,7 @@
  *
  * @package Core
  * @license http://unlicense.org/ UNLICENSE
- * @link    https://github.com/rss-bridge/rss-bridge
+ * @link    https://github.com/sredevopsdev/rss-bridge
  */
 
 /** Path to the root folder of RSS-Bridge (where index.php is located) */
@@ -37,7 +37,7 @@ const WHITELIST = __DIR__ . '/../whitelist.txt';
 const WHITELIST_DEFAULT = __DIR__ . '/../whitelist.default.txt';
 
 /** URL to the RSS-Bridge repository */
-const REPOSITORY = 'https://github.com/RSS-Bridge/rss-bridge/';
+const REPOSITORY = 'https://github.com/sredevopsdev/rss-bridge/';
 
 // Allow larger files for simple_html_dom
 const MAX_FILE_SIZE = 10000000;

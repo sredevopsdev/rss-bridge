@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import os.path
 
-# This script is specifically written to be used in automation for https://github.com/RSS-Bridge/rss-bridge
+# This script is specifically written to be used in automation for https://github.com/sredevopsdev/rss-bridge
 #
 # This will scrape the whitelisted bridges in the current state (port 3000) and the PR state (port 3001) of
 # RSS-Bridge, generate a feed for each of the bridges and save the output as html files.

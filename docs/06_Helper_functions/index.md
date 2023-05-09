@@ -114,11 +114,11 @@ Returns a DOM object (even if provided a string).
 ```php
 $html = '<img src="/blob/master/README.md">';
 
-$html = defaultLinkTo($html, 'https://www.github.com/rss-bridge/rss-bridge'); // Using custom server
+$html = defaultLinkTo($html, 'https://www.github.com/sredevopsdev/rss-bridge'); // Using custom server
 $html = defaultLinkTo($html, $this->getURI()); // Using bridge URL
 
 // Output
-// <img src="https://www.github.com/rss-bridge/rss-bridge/blob/master/README.md">
+// <img src="https://www.github.com/sredevopsdev/rss-bridge/blob/master/README.md">
 ```
 
 # backgroundToImg

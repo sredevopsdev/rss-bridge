@@ -7,7 +7,7 @@ You can increase your Heroku hours to 1000 a month from 550 a month by simply ve
 ## Deploy button
 You can simply press the button below to easily deploy RSS Bridge on Heroku and use the default bridges. Or you can follow the manual instructions given below.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RSS-Bridge/rss-bridge)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sredevopsdev/rss-bridge)
 
 ## Manual deploy
 1. Fork this repo by clicking the Fork button at the top right of this page (only on desktop site)

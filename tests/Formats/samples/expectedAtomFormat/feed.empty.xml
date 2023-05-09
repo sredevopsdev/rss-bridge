@@ -9,7 +9,7 @@
 	<author>
 		<name>RSS-Bridge</name>
 	</author>
-	<link href="https://github.com/RSS-Bridge/rss-bridge/" rel="alternate" type="text/html"/>
+	<link href="https://github.com/sredevopsdev/rss-bridge/" rel="alternate" type="text/html"/>
 	<link href="https://example.com/feed" rel="self" type="application/atom+xml"/>
 
 </feed>
