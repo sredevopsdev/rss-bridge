@@ -6,9 +6,7 @@ final class Logger
 {
     public static function debug(string $message, array $context = [])
     {
-        if (Debug::isEnabled()) {
-            self::log('DEBUG', $message, $context);
-        }
+        self::log('DEBUG', $message, $context);
     }
 
     public static function info(string $message, array $context = []): void
@@ -28,6 +26,11 @@ final class Logger
 
     private static function log(string $level, string $message, array $context = []): void
     {
+        if (!Debug::isEnabled() && $level === 'DEBUG') {
+            // Don't log this debug log record because debug mode is disabled
+            return;
+        }
+
         if (isset($context['e'])) {
             /** @var \Throwable $e */
             $e = $context['e'];
@@ -40,6 +43,7 @@ final class Logger
             $context['url'] = get_current_url();
             $context['trace'] = trace_to_call_points(trace_from_exception($e));
             // Don't log these exceptions
+            // todo: this logic belongs in log handler
             $ignoredExceptions = [
                 'You must specify a format',
                 'Format name invalid',
@@ -51,6 +55,10 @@ final class Logger
                 'Unable to find channel. The channel is non-existing or non-public',
                 // fb
                 'This group is not public! RSS-Bridge only supports public groups!',
+                'You must be logged in to view this page',
+                'Unable to get the page id. You should consider getting the ID by hand',
+                // tiktok 404
+                'https://www.tiktok.com/@',
             ];
             foreach ($ignoredExceptions as $ignoredException) {
                 if (str_starts_with($e->getMessage(), $ignoredException)) {
@@ -66,7 +74,13 @@ final class Logger
             $message,
             $context ? Json::encode($context) : ''
         );
+
         // Log to stderr/stdout whatever that is
+        // todo: extract to log handler
         error_log($text);
+
+        // Log to file
+        // todo: extract to log handler
+        // file_put_contents('/tmp/rss-bridge.log', $text, FILE_APPEND | LOCK_EX);
     }
 }

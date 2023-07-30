@@ -348,7 +348,7 @@ abstract class XPathAbstract extends BridgeAbstract
     {
         $title = $xpath->query($this->getParam('feed_title'));
         if (count($title) === 1) {
-            return $this->getItemValueOrNodeValue($title);
+            return $this->fixEncoding($this->getItemValueOrNodeValue($title));
         }
     }
 
@@ -387,6 +387,9 @@ abstract class XPathAbstract extends BridgeAbstract
         libxml_clear_errors();
         libxml_use_internal_errors(false);
 
+        // fix relative links
+        defaultLinkTo($webPageHtml, $webPageHtml->baseURI ?? $this->feedUri);
+
         $xpath = new \DOMXPath($webPageHtml);
 
         $this->feedName = $this->provideFeedTitle($xpath);
@@ -414,7 +417,8 @@ abstract class XPathAbstract extends BridgeAbstract
                     continue;
                 }
 
-                $item->__set($param, $this->formatParamValue($param, $this->getItemValueOrNodeValue($typedResult)));
+                $value = $this->getItemValueOrNodeValue($typedResult, $param === 'content');
+                $item->__set($param, $this->formatParamValue($param, $value));
             }
 
             $itemId = $this->generateItemId($item);
@@ -569,21 +573,33 @@ abstract class XPathAbstract extends BridgeAbstract
      * @param $typedResult
      * @return string
      */
-    protected function getItemValueOrNodeValue($typedResult)
+    protected function getItemValueOrNodeValue($typedResult, $returnXML = false)
     {
         if ($typedResult instanceof \DOMNodeList) {
             $item = $typedResult->item(0);
             if ($item instanceof \DOMElement) {
-                return trim($item->nodeValue);
+                // Don't escape XML
+                if ($returnXML) {
+                    return ($item->ownerDocument ?? $item)->saveXML($item);
+                }
+                $text = $item->nodeValue;
             } elseif ($item instanceof \DOMAttr) {
-                return trim($item->value);
+                $text = $item->value;
             } elseif ($item instanceof \DOMText) {
-                return trim($item->wholeText);
+                $text = $item->wholeText;
             }
         } elseif (is_string($typedResult) && strlen($typedResult) > 0) {
-            return trim($typedResult);
+            $text = $typedResult;
+        } else {
+            throw new \Exception('Unknown type of XPath expression result.');
         }
-        throw new \Exception('Unknown type of XPath expression result.');
+
+        $text = trim($text);
+
+        if ($returnXML) {
+            return htmlspecialchars($text);
+        }
+        return $text;
     }
 
     /**

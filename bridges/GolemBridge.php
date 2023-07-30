@@ -114,8 +114,8 @@ class GolemBridge extends FeedExpander
 
         // delete known bad elements
         foreach (
-            $article->find('div[id*="adtile"], #job-market, #seminars,
-			div.gbox_affiliate, div.toc, .embedcontent') as $bad
+            $article->find('div[id*="adtile"], #job-market, #seminars, iframe,
+			div.gbox_affiliate, div.toc, .embedcontent, script') as $bad
         ) {
             $bad->remove();
         }

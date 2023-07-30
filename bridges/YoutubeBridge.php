@@ -13,7 +13,6 @@ class YoutubeBridge extends BridgeAbstract
     const URI = 'https://www.youtube.com/';
     const CACHE_TIMEOUT = 10800; // 3h
     const DESCRIPTION = 'Returns the 10 newest videos by username/channel/playlist or search';
-    const MAINTAINER = 'em92';
 
     const PARAMETERS = [
         'By username' => [
@@ -234,7 +233,11 @@ class YoutubeBridge extends BridgeAbstract
     private function getJSONData($html)
     {
         $scriptRegex = '/var ytInitialData = (.*?);<\/script>/';
-        preg_match($scriptRegex, $html, $matches) or returnServerError('Could not find ytInitialData');
+        $result = preg_match($scriptRegex, $html, $matches);
+        if (! $result) {
+            Logger::debug('Could not find ytInitialData');
+            return null;
+        }
         return json_decode($matches[1]);
     }
 
@@ -293,15 +296,17 @@ class YoutubeBridge extends BridgeAbstract
                 }
             }
 
-            if (preg_match('/([\d]{1,2})\:([\d]{1,2})\:([\d]{2})/', $durationText)) {
-                $durationText = preg_replace('/([\d]{1,2})\:([\d]{1,2})\:([\d]{2})/', '$1:$2:$3', $durationText);
-            } else {
-                $durationText = preg_replace('/([\d]{1,2})\:([\d]{2})/', '00:$1:$2', $durationText);
-            }
-            sscanf($durationText, '%d:%d:%d', $hours, $minutes, $seconds);
-            $duration = $hours * 3600 + $minutes * 60 + $seconds;
-            if ($duration < $duration_min || $duration > $duration_max) {
-                continue;
+            if (is_string($durationText)) {
+                if (preg_match('/([\d]{1,2})\:([\d]{1,2})\:([\d]{2})/', $durationText)) {
+                    $durationText = preg_replace('/([\d]{1,2})\:([\d]{1,2})\:([\d]{2})/', '$1:$2:$3', $durationText);
+                } else {
+                    $durationText = preg_replace('/([\d]{1,2})\:([\d]{2})/', '00:$1:$2', $durationText);
+                }
+                sscanf($durationText, '%d:%d:%d', $hours, $minutes, $seconds);
+                $duration = $hours * 3600 + $minutes * 60 + $seconds;
+                if ($duration < $duration_min || $duration > $duration_max) {
+                    continue;
+                }
             }
 
             // $vid_list .= $vid . ',';
@@ -336,6 +341,7 @@ class YoutubeBridge extends BridgeAbstract
                 $html = $this->ytGetSimpleHTMLDOM($url_listing);
                 $jsonData = $this->getJSONData($html);
                 $url_feed = $jsonData->metadata->channelMetadataRenderer->rssUrl;
+                $this->iconURL = $jsonData->metadata->channelMetadataRenderer->avatar->thumbnails[0]->url;
             }
             if (!$this->skipFeeds()) {
                 $html = $this->ytGetSimpleHTMLDOM($url_feed);
@@ -442,6 +448,15 @@ class YoutubeBridge extends BridgeAbstract
                 return htmlspecialchars_decode($this->feedName) . ' - YouTube'; // We already know it's a bridge, right?
             default:
                 return parent::getName();
+        }
+    }
+
+    public function getIcon()
+    {
+        if (empty($this->iconURL)) {
+            return parent::getIcon();
+        } else {
+            return $this->iconURL;
         }
     }
 }
