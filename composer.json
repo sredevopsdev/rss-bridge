@@ -1,5 +1,5 @@
 {
-    "name": "rss-bridge/rss-bridge",
+    "name": "sredevopsdev/rss-bridge",
     "type": "project",
     "description": "RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.",
     "keywords": [
@@ -13,13 +13,13 @@
         "feed",
         "cli"
     ],
-    "homepage": "https://github.com/rss-bridge/rss-bridge/",
+    "homepage": "https://github.com/sredevopsdev/rss-bridge/",
     "license": "UNLICENSE",
     "support": {
-        "issues": "https://github.com/rss-bridge/rss-bridge/issues/",
+        "issues": "https://github.com/sredevopsdev/rss-bridge/issues/",
         "docs": "https://rss-bridge.github.io/rss-bridge/",
-        "source": "https://github.com/rss-bridge/rss-bridge/",
-        "rss": "https://github.com/RSS-Bridge/rss-bridge/commits/master.atom"
+        "source": "https://github.com/sredevopsdev/rss-bridge/",
+        "rss": "https://github.com/sredevopsdev/rss-bridge/commits/master.atom"
     },
     "require": {
         "php": ">=7.4",

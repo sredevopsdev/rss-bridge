@@ -1,5 +1,5 @@
 {
-    "title": "RSS-Bridge",
+    "title": "(fork) RSS-Bridge",
     "tagline": "The RSS feed for websites missing it",
     "author": "RSS-Bridge Contributors",
     "image": "./images/rssbridgelogo.png",
@@ -19,14 +19,14 @@
         "date_modified": true,
         "inherit_index": true,
 
-        "repo": "RSS-Bridge/rss-bridge",
-        "edit_on_github": "RSS-Bridge/rss-bridge/tree/master/docs",
+        "repo": "sredevopsdev/rss-bridge",
+        "edit_on_github": "sredevopsdev/rss-bridge/tree/master/docs",
         "google_analytics": false,
         "plausible_domain": false,
         "links": {
-            "GitHub Repository": "https://github.com/RSS-Bridge/rss-bridge",
-            "Help/Support/Bugs": "https://github.com/RSS-Bridge/rss-bridge/issues",
-            "Docker Images": "https://github.com/RSS-Bridge/rss-bridge/pkgs/container/rss-bridge"
+            "GitHub Repository": "https://github.com/sredevopsdev/rss-bridge",
+            "Help/Support/Bugs": "https://github.com/sredevopsdev/rss-bridge/issues",
+            "Docker Images": "https://github.com/sredevopsdev/rss-bridge/pkgs/container/rss-bridge"
         },
         "powered_by": "Powered by Daux.io"
     }

@@ -249,7 +249,7 @@ class DisplayAction implements ActionInterface
 
     private static function createGithubIssueUrl($bridge, $e, string $message): string
     {
-        return sprintf('https://github.com/RSS-Bridge/rss-bridge/issues/new?%s', http_build_query([
+        return sprintf('https://github.com/sredevopsdev/rss-bridge/issues/new?%s', http_build_query([
             'title' => sprintf('%s failed with error %s', $bridge->getName(), $e->getCode()),
             'body' => sprintf(
                 "```\n%s\n\n%s\n\nQuery string: %s\nVersion: %s\nOs: %s\nPHP version: %s\n```",
@@ -268,7 +268,7 @@ class DisplayAction implements ActionInterface
     private static function createGithubSearchUrl($bridge): string
     {
         return sprintf(
-            'https://github.com/RSS-Bridge/rss-bridge/issues?q=%s',
+            'https://github.com/sredevopsdev/rss-bridge/issues?q=%s',
             urlencode('is:issue is:open ' . $bridge->getName())
         );
     }

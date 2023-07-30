@@ -16,7 +16,7 @@ The cache duration is bridge specific and can last anywhere between five minutes
 
 You can only do that if you are hosting the RSS-Bridge instance:
 - Enable [`custom_timeout`](../03_For_Hosts/08_Custom_Configuration.md#customtimeout)
-- Alternatively, change the default timeout for your bridge by modifying the `CACHE_TIMEOUT` constant in the relevant bridge file (e.g [here](https://github.com/RSS-Bridge/rss-bridge/blob/master/bridges/FilterBridge.php#L7) for the Filter Bridge).
+- Alternatively, change the default timeout for your bridge by modifying the `CACHE_TIMEOUT` constant in the relevant bridge file (e.g [here](https://github.com/sredevopsdev/rss-bridge/blob/master/bridges/FilterBridge.php#L7) for the Filter Bridge).
 
 ## Firefox doesn't show feeds anymore, what can I do?
 

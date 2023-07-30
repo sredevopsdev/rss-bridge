@@ -55,7 +55,7 @@ bridges/FeedExpanderExampleBridge.php   export-ignore
 # Keep the following lines commented out. Heroku does
 # not function if the composer files are ignored during
 # export. For more information see
-# https://github.com/rss-bridge/rss-bridge/issues/1165
+# https://github.com/sredevopsdev/rss-bridge/issues/1165
 #
 # composer.json                         export-ignore
 # composer.lock                         export-ignore
@@ -65,6 +65,6 @@ bridges/FeedExpanderExampleBridge.php   export-ignore
 # Keep the following line commented out. Heroku does
 # not function if app.json is ignored during export.
 # For more information see
-# https://github.com/rss-bridge/rss-bridge/issues/1165
+# https://github.com/sredevopsdev/rss-bridge/issues/1165
 #
 # app.json                              export-ignore

@@ -3,7 +3,7 @@
 class XPathBridge extends XPathAbstract
 {
     const NAME = 'XPathBridge';
-    const URI = 'https://github.com/rss-bridge/rss-bridge';
+    const URI = 'https://github.com/sredevopsdev/rss-bridge';
     const DESCRIPTION
         = 'Parse any webpage using <a href="https://devhints.io/xpath" target="_blank">XPath expressions</a>';
     const MAINTAINER = 'Niehztog';

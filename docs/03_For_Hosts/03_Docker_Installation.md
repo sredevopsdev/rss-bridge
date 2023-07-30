@@ -42,7 +42,7 @@ services:
 |Realtime container logs|`docker logs -f rss-bridge`|
 
 # Adding custom bridges and configurations
-If you want to add a bridge that is not part of [`/bridges`](https://github.com/RSS-Bridge/rss-bridge/tree/master/bridges), you can map a folder to the `/config` folder of the `rss-bridge` container.
+If you want to add a bridge that is not part of [`/bridges`](https://github.com/sredevopsdev/rss-bridge/tree/master/bridges), you can map a folder to the `/config` folder of the `rss-bridge` container.
 
 1. Create a folder in the location of your docker-compose.yml or your general docker working area (in this example it will be `/home/docker/rssbridge/config` ). 
 2. Copy your [custom bridges](../05_Bridge_API/01_How_to_create_a_new_bridge.md) to the `/home/docker/rssbridge/config` folder. Applies also to [config.ini.php](../03_For_Hosts/08_Custom_Configuration.md).

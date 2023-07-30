@@ -1,7 +1,7 @@
 In order to install RSS-Bridge on your own web server* do as follows:
 
 * Make sure your web server meets all [requirements](../01_General/03_Requirements.md)
-* Download the ZIP file of the [last stable release](https://github.com/RSS-Bridge/rss-bridge/releases)
+* Download the ZIP file of the [last stable release](https://github.com/sredevopsdev/rss-bridge/releases)
 * Place all files on your web server
 
 For linux hosts:

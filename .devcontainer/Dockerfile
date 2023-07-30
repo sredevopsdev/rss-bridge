@@ -1,6 +1,6 @@
-FROM rssbridge/rss-bridge:latest
+FROM ghcr.io/sredevopsdev/rss-bridge:latest
 
-RUN  apt-get update && \
+RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
       git && \
     pecl install xdebug && \

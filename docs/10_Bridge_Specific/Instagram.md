@@ -1,7 +1,7 @@
 InstagramBridge
 ===============
 
-To somehow bypass the [rate limiting issue](https://github.com/RSS-Bridge/rss-bridge/issues/1891)
+To somehow bypass the [rate limiting issue](https://github.com/sredevopsdev/rss-bridge/issues/1891)
 it is suggested to deploy a private RSS-Bridge instance that uses a working Instagram account.
 
 **NOTE**: There exists alternative bridges (e.g. PicukiBridge and PicnobBridge) for viewing posts without a working account.

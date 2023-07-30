@@ -4,7 +4,7 @@ class FeedExpanderExampleBridge extends FeedExpander
 {
     const MAINTAINER = 'logmanoriginal';
     const NAME = 'FeedExpander Example';
-    const URI = 'http://github.com/RSS-Bridge/rss-bridge/';
+    const URI = 'http://github.com/sredevopsdev/rss-bridge/';
     const DESCRIPTION = 'Example bridge to test FeedExpander';
 
     const PARAMETERS = [

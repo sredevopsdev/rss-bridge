@@ -63,11 +63,11 @@ function create_sane_exception_message(\Throwable $e): string
 }
 
 /**
- * Returns e.g. https://github.com/RSS-Bridge/rss-bridge/blob/master/bridges/AO3Bridge.php#L8
+ * Returns e.g. https://github.com/sredevopsdev/rss-bridge/blob/master/bridges/AO3Bridge.php#L8
  */
 function render_github_url(string $file, int $line, string $revision = 'master'): string
 {
-    return sprintf('https://github.com/RSS-Bridge/rss-bridge/blob/%s/%s#L%s', $revision, $file, $line);
+    return sprintf('https://github.com/sredevopsdev/rss-bridge/blob/%s/%s#L%s', $revision, $file, $line);
 }
 
 function trace_from_exception(\Throwable $e): array

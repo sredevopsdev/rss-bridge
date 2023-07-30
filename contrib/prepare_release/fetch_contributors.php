@@ -4,7 +4,7 @@
 
 require __DIR__ . '/../../lib/bootstrap.php';
 
-$url = 'https://api.github.com/repos/rss-bridge/rss-bridge/contributors';
+$url = 'https://api.github.com/repos/sredevopsdev/rss-bridge/contributors';
 $contributors = [];
 $next = true;
 
@@ -37,7 +37,7 @@ while ($next) { /* Collect all contributors */
     }
 }
 
-/* Example JSON data: https://api.github.com/repos/rss-bridge/rss-bridge/contributors */
+/* Example JSON data: https://api.github.com/repos/sredevopsdev/rss-bridge/contributors */
 
 // We want contributors sorted by name
 usort($contributors, function ($a, $b) {
